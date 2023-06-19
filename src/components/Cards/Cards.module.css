@@ -1,0 +1,6 @@
+.contenedor{
+    background-color: rgb(192, 216, 228);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
