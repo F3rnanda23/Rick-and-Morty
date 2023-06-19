@@ -1,0 +1,19 @@
+.divAbout{
+    animation: blinkText 5s infinite;
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50); /* Gradiente de color metálico */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(140, 206, 226);
+    text-shadow: 2px 2px 4px rgba(3, 2, 51, 0.5); 
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+    
+  }
+  
+  @keyframes blinkText {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }

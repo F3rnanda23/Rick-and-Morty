@@ -1,8 +1,9 @@
+import style from './About.module.css'
 
 const About = () => {
     return(
-        <div>
-            <h1> Hola!, soy la creadora de este proyecto</h1>
+        <div className={style.divAbout}>
+            <h1> Hola!, deseo que te diviertas viendo las cards de los personajes de Rick and Morty</h1>
         </div>
     );
 }

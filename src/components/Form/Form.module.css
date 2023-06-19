@@ -1,0 +1,36 @@
+.labelEmail{
+    color: rgb(179, 238, 42);
+    font-size: x-large;
+    font-weight: 800;
+    margin-right: 50px;
+    -webkit-text-stroke: 1px black;
+}
+.labelEmail:hover {
+    color: rgb(8, 129, 59); 
+}
+
+.labelpassword{
+    color: rgb(197, 240, 9);
+    font-size: x-large;
+    font-weight: 800;
+    -webkit-text-stroke: 1px black;
+}
+.labelpassword:hover {
+    color: rgb(8, 129, 59); 
+}
+
+.btn{
+    background-color: rgb(134, 189, 80);
+    border-radius: 12px;
+    font-size: large;
+    color: rgb(6, 39, 100);
+    font-size: larger;
+    font-weight: 700;
+    font-family: 'Lucida Sans';
+    border: 2px solid rgb(41, 6, 122);
+    margin-left: 150px;
+   
+}
+.btn:hover {
+    background-color: rgb(27, 149, 165); 
+}

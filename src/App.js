@@ -56,14 +56,30 @@ function App() {
       setCharacters (charactersFiltered)
    }
   
-
+// fondos
+useEffect(() => {
+   const body = document.querySelector('body');
+   if (location.pathname === '/home') {
+     body.classList.add('body-home');
+     body.classList.remove('body-main');
+     body.classList.remove('body-detail'); 
+   } else if (location.pathname.startsWith('/detail')) {
+     body.classList.add('body-detail');
+     body.classList.remove('body-main');
+     body.classList.remove('body-home'); 
+   } else {
+     body.classList.add('body-main');
+     body.classList.remove('body-home');
+     body.classList.remove('body-detail'); 
+   }
+ }, [location]);
    
 
    return (
       <div className='App'>
 
          {
-            location.pathname !== '/' ?  <Nav onSearch={onSearch } onRandom={onRandom}/> : null
+            location.pathname !== '/' ?  <Nav onSearch={onSearch }  setAccess={setAccess} onRandom={onRandom}/> : null
          }
         
          

@@ -1,0 +1,22 @@
+.barra1{
+    border-radius: 30px;
+    border: 4px solid aquamarine;
+    height:60px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url('https://media.giphy.com/media/9G1jYrLDMATYhV9ojO/giphy.gif');
+}
+
+.btn1{
+margin-left: 20px;
+background-color: blanchedalmond;
+color: rgb(148, 11, 141);
+border-radius: 5px;
+border: 1px solid rgb(139, 172, 233);
+font-family: Arial;
+font-size: medium;
+}
+.btn1:hover {
+    background-color: rgb(236, 163, 26); 
+}

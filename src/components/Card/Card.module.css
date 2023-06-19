@@ -9,8 +9,13 @@
     box-shadow: 29px 18px 49px 0px rgba(0,0,0,0.88);
     display: flex;
     flex-direction: column;
+    
 
 }  
+
+h2{
+    line-height: 0.3;
+}
 
 .closeButton {
     background-color: rgb(95, 57, 235);
