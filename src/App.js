@@ -7,7 +7,7 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Detail from './components/Detail/Detail';
 import About from './components/About/About.';
 import Form  from './components/Form/Form';
-
+import Favorites from './components/Favorites/Favorites';
 
 
 const email= 'mfarriag@gmail.com';
@@ -90,6 +90,7 @@ useEffect(() => {
             <Route path="/detail/:id" element={<Detail/>}/>
             <Route path="*" element={""}/>
             <Route path="/" element={<Form login={login}/>}/>
+            <Route path="/Favorites" element={<Favorites/>}/>
 
          </Routes>
 

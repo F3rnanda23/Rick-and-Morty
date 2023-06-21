@@ -27,6 +27,10 @@ import  style from './Nav.module.css';
                         <Link to='/home'>Home</Link>
                     </button>
 
+                    <button className={style.btn1}>
+                        <Link to='/favorites'>Favorites</Link>
+                    </button>
+
                     <button onClick={handleLogOut} className={style.btn1}>Log Out</button>
                 </div>
             </div>
