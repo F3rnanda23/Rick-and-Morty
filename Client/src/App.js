@@ -12,6 +12,7 @@ import Favorites from './components/Favorites/Favorites';
 
 const email= 'mfarriag@gmail.com';
 const password = '112233';
+const URL = 'http://localhost:3001/rickandmorty/login/';
 
 function App() {
 
@@ -19,32 +20,42 @@ function App() {
    const navigate= useNavigate();
    const [characters, setCharacters] = useState ([]);
    const [access, setAccess] = useState (false);
+  
 
-   const login= (userData) =>{
-      if (userData.email === email && userData.password === password) {
-         setAccess(true);
-         navigate('/home');
+   const login = async (userData) =>{
+      try {
+         const { email, password } = userData;
+         const { data }= await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = data;
+
+         setAccess(access);
+         access && navigate('/home');
+        
+      } catch (error) {
+         console.log(error.message)
       }
+    
    }   
 
    useEffect(() =>{
       !access && navigate('/');
    }, [access])
 
-   const onSearch= (id) => {
-      const randomId = Math.floor(Math.random() * 826) + 1;
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
-      .then(response => response.data) 
-      .then((data) => {
-         if (data.name) {
-            const char= characters.find((ch)=> ch.id=== Number(id))
-            if (char) return alert('ese character ya existe')
-            setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            alert('¡No hay personajes con este ID!');
-         }
-      }).catch(error => alert('¡No hay personajes con este ID!'));
-   }
+   const onSearch= async (id) => {
+      try {
+         const randomId = Math.floor(Math.random() * 826) + 1;
+         const { data }= await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+         
+            if (data.name) {
+               const char= characters.find((ch)=> ch.id=== Number(id))
+               if (char) return alert('ese character ya existe')
+               setCharacters((oldChars) => [...oldChars, data]);
+            } 
+            
+         } catch (error) {
+            alert('¡No hay personajes con este ID!'); 
+         }  
+   };
 
     const onRandom = () => {
       const randomId = Math.floor(Math.random() * 671) + 1;
