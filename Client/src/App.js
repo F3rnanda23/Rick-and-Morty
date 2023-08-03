@@ -32,7 +32,7 @@ function App() {
          access && navigate('/home');
         
       } catch (error) {
-         console.log(error.message)
+         return { error: error.message }
       }
     
    }   
